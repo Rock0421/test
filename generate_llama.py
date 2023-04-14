@@ -32,7 +32,7 @@ def get_model(base_model):
     if device == "cuda":
         model = AutoModelForCausalLM.from_pretrained(
             base_model,
-            torch_dtype=torch.float8,
+            load_in_8bit=True,
             device_map="auto",
         )
         if os.path.exists(args.lora_weights):
