@@ -32,8 +32,8 @@ def get_model(base_model):
     if device == "cuda":
         model = AutoModelForCausalLM.from_pretrained(
             base_model,
-            torch_dtype=torch.float16,
-            device_map={"0": "cuda:0", "1": "cpu"},
+            torch_dtype=torch.float8,
+            device_map="auto",
         )
         if os.path.exists(args.lora_weights):
             model = PeftModel.from_pretrained(
