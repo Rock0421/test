@@ -33,7 +33,7 @@ def get_model(base_model):
         model = AutoModelForCausalLM.from_pretrained(
             base_model,
             torch_dtype=torch.float16,
-            device_map="auto",
+            device_map={"0": "cuda:0", "1": "cpu"},
         )
         if os.path.exists(args.lora_weights):
             model = PeftModel.from_pretrained(
