@@ -16,5 +16,5 @@ fi
 mkdir -p $OUTPUT
 
 deepspeed --num_gpus 1 main.py --model_name_or_path facebook/opt-1.3b \
-   --gradient_accumulation_steps 2 --lora_dim 128 --zero_stage $ZERO_STAGE --only_optimize_lora \
+   --gradient_accumulation_steps 2 --lora_dim 128 --zero_stage $ZERO_STAGE --only_optimize_lora --per_device_train_batch_size 1 --per_device_eval_batch_size 1 \
    --deepspeed --output_dir $OUTPUT &> $OUTPUT/training.log
