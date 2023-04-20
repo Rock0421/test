@@ -21,7 +21,7 @@
 ## OPENAI_API_KEY - OpenAI API Key (Example: my-openai-api-key)
 ## TEMPERATURE - Sets temperature in OpenAI (Default: 0)
 ## USE_AZURE - Use Azure OpenAI or not (Default: False)
-OPENAI_API_KEY=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
+OPENAI_API_KEY=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
 # TEMPERATURE=0
 # USE_AZURE=False
 
