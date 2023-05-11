@@ -73,4 +73,4 @@ if __name__ == "__main__":
                 server_port=7860, # the port for listening
                 show_api=False, # if display the api document
                 share=True, # if register a public url
-                inbrowser=False) # if browser would be open automatically
+                inbrowser=True) # if browser would be open automatically
